@@ -9,521 +9,521 @@
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Guilherme Risson · Software Engineer Student">
-<meta property="og:description" content="Estudante de Engenharia de Software. Python, FastAPI, React, RAG e LLMs — projetos com recuperação confiável, avaliação medida e custo sob controle.">
+<meta property="og:description" content="Estudante de Engenharia de Software. Python, FastAPI, React, RAG e LLMs : projetos com recuperação confiável, avaliação medida e custo sob controle.">
 <meta property="og:url" content="https://guilhermerissondev.github.io/">
 <meta property="og:image" content="https://guilhermerissondev.github.io/guilherme-risson.jpg">
 
 <style>
-  :root {
-    --ink:   #111111;
-    --muted: #555555;
-    --rule:  #d4d4d4;
-    --hover: #f4f4f4;
-    --pad:   clamp(20px, 2.7vw, 38px);
+ :root {
+ --ink: #111111;
+ --muted: #555555;
+ --rule: #d4d4d4;
+ --hover: #f4f4f4;
+ --pad: clamp(20px, 2.7vw, 38px);
 
-    --sans:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --serif: "Iowan Old Style", Baskerville, "Times New Roman", Times, serif;
-    --mono:  SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  }
+ --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ --serif: "Iowan Old Style", Baskerville, "Times New Roman", Times, serif;
+ --mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+ }
 
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+ * { box-sizing: border-box; }
+ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+ @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-  body {
-    margin: 0;
-    background: #fff;
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
+ body {
+ margin: 0;
+ background: #fff;
+ color: var(--ink);
+ font-family: var(--sans);
+ font-size: 16px;
+ line-height: 1.5;
+ -webkit-font-smoothing: antialiased;
+ }
 
-  a { color: inherit; text-decoration: none; }
-  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+ a { color: inherit; text-decoration: none; }
+ :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
-  .label {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.065em;
-    text-transform: uppercase;
-    line-height: 1.35;
-  }
+.label {
+ font-family: var(--mono);
+ font-size: 11px;
+ font-weight: 500;
+ letter-spacing: 0.065em;
+ text-transform: uppercase;
+ line-height: 1.35;
+ }
 
-  /* -------------------------------- topo -------------------------------- */
+ /* -------------------------------- topo -------------------------------- */
 
-  .top {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 12px var(--pad);
-    background: #fff;
-    border-bottom: 1px solid var(--ink);
-  }
-  .top .role { text-align: right; }
-  .top-right { display: flex; align-items: center; gap: 14px; }
-  .lang {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.065em;
-    color: var(--ink);
-    background: #fff;
-    border: 1px solid var(--ink);
-    border-radius: 0;
-    padding: 5px 8px;
-    cursor: pointer;
-  }
+.top {
+ position: sticky;
+ top: 0;
+ z-index: 5;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 20px;
+ padding: 12px var(--pad);
+ background: #fff;
+ border-bottom: 1px solid var(--ink);
+ }
+.top.role { text-align: right; }
+.top-right { display: flex; align-items: center; gap: 14px; }
+.lang {
+ font-family: var(--mono);
+ font-size: 11px;
+ font-weight: 500;
+ letter-spacing: 0.065em;
+ color: var(--ink);
+ background: #fff;
+ border: 1px solid var(--ink);
+ border-radius: 0;
+ padding: 5px 8px;
+ cursor: pointer;
+ }
 
-  /* -------------------------------- hero -------------------------------- */
+ /* -------------------------------- hero -------------------------------- */
 
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: calc(100vh - 52px);
-    border-bottom: 1px solid var(--ink);
-  }
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 56px;
-    padding: 52px var(--pad) 56px;
-  }
-  h1 {
-    margin: 0;
-    font-weight: 400;
-    font-size: clamp(64px, 10.4vw, 168px);
-    line-height: 0.8;
-    letter-spacing: -0.075em;
-  }
-  .intro {
-    margin: 0;
-    max-width: 40ch;
-    font-family: var(--serif);
-    font-size: clamp(18px, 1.6vw, 22px);
-    line-height: 1.35;
-  }
-  .portrait {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-    border-left: 1px solid var(--ink);
-  }
-  .portrait img {
-    display: block;
-    width: min(100%, 560px);
-    height: auto;
-    filter: grayscale(1) contrast(1.15);
-    mix-blend-mode: multiply;
-  }
+.hero {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ min-height: calc(100vh - 52px);
+ border-bottom: 1px solid var(--ink);
+ }
+.hero-text {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 56px;
+ padding: 52px var(--pad) 56px;
+ }
+ h1 {
+ margin: 0;
+ font-weight: 400;
+ font-size: clamp(64px, 10.4vw, 168px);
+ line-height: 0.8;
+ letter-spacing: -0.075em;
+ }
+.intro {
+ margin: 0;
+ max-width: 40ch;
+ font-family: var(--serif);
+ font-size: clamp(18px, 1.6vw, 22px);
+ line-height: 1.35;
+ }
+.portrait {
+ display: flex;
+ align-items: flex-end;
+ justify-content: center;
+ overflow: hidden;
+ border-left: 1px solid var(--ink);
+ }
+.portrait img {
+ display: block;
+ width: min(100%, 560px);
+ height: auto;
+ filter: grayscale(1) contrast(1.15);
+ mix-blend-mode: multiply;
+ }
 
-  /* ------------------------------- secoes ------------------------------- */
+ /* ------------------------------- secoes ------------------------------- */
 
-  section {
-    display: grid;
-    grid-template-columns: minmax(0, 270px) minmax(0, 1fr);
-    border-bottom: 1px solid var(--ink);
-    scroll-margin-top: 52px;
-  }
-  section > .label { padding: 44px var(--pad); }
-  .body { padding: 40px var(--pad) 88px; }
+ section {
+ display: grid;
+ grid-template-columns: minmax(0, 270px) minmax(0, 1fr);
+ border-bottom: 1px solid var(--ink);
+ scroll-margin-top: 52px;
+ }
+ section >.label { padding: 44px var(--pad); }
+.body { padding: 40px var(--pad) 88px; }
 
-  h2 {
-    margin: 0 0 56px;
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(44px, 6.3vw, 91px);
-    line-height: 0.94;
-    letter-spacing: -0.06em;
-  }
+ h2 {
+ margin: 0 0 56px;
+ font-family: var(--serif);
+ font-weight: 400;
+ font-size: clamp(44px, 6.3vw, 91px);
+ line-height: 0.94;
+ letter-spacing: -0.06em;
+ }
 
-  .cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    max-width: 640px;
-  }
-  .cols p { margin: 0; font-size: 15px; }
+.cols {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 48px;
+ max-width: 640px;
+ }
+.cols p { margin: 0; font-size: 15px; }
 
-  .stack {
-    margin: 48px 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-    max-width: 640px;
-    color: var(--muted);
-  }
+.stack {
+ margin: 48px 0 0;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 6px 18px;
+ max-width: 640px;
+ color: var(--muted);
+ }
 
-  /* ------------------------------- linhas ------------------------------- */
+ /* ------------------------------- linhas ------------------------------- */
 
-  .rows {
-    margin: 0 calc(var(--pad) * -1) -88px;
-    border-top: 1px solid var(--ink);
-  }
-  .row {
-    display: grid;
-    grid-template-columns: 120px minmax(0, 1fr) minmax(0, 290px) 24px;
-    gap: 28px;
-    align-items: center;
-    padding: 30px var(--pad);
-    border-bottom: 1px solid var(--rule);
-  }
-  .row:last-child { border-bottom: 0; }
-  a.row { transition: background-color .15s ease; }
-  a.row:hover { background: var(--hover); }
-  .row .label { color: var(--muted); }
-  .row h3 {
-    margin: 0;
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(28px, 3.3vw, 44px);
-    line-height: 1;
-    letter-spacing: -0.05em;
-    overflow-wrap: anywhere;
-  }
-  .row p { margin: 0; font-size: 13px; line-height: 1.45; }
-  .row .arrow { font-size: 18px; text-align: right; }
+.rows {
+ margin: 0 calc(var(--pad) * -1) -88px;
+ border-top: 1px solid var(--ink);
+ }
+.row {
+ display: grid;
+ grid-template-columns: 120px minmax(0, 1fr) minmax(0, 290px) 24px;
+ gap: 28px;
+ align-items: center;
+ padding: 30px var(--pad);
+ border-bottom: 1px solid var(--rule);
+ }
+.row:last-child { border-bottom: 0; }
+ a.row { transition: background-color.15s ease; }
+ a.row:hover { background: var(--hover); }
+.row.label { color: var(--muted); }
+.row h3 {
+ margin: 0;
+ font-family: var(--serif);
+ font-weight: 400;
+ font-size: clamp(28px, 3.3vw, 44px);
+ line-height: 1;
+ letter-spacing: -0.05em;
+ overflow-wrap: anywhere;
+ }
+.row p { margin: 0; font-size: 13px; line-height: 1.45; }
+.row.arrow { font-size: 18px; text-align: right; }
 
-  /* ------------------------------- rodape ------------------------------- */
+ /* ------------------------------- rodape ------------------------------- */
 
-  footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 22px var(--pad) 30px;
-  }
+ footer {
+ display: flex;
+ justify-content: space-between;
+ gap: 20px;
+ padding: 22px var(--pad) 30px;
+ }
 
-  /* ------------------------------ estreito ------------------------------ */
+ /* ------------------------------ estreito ------------------------------ */
 
-  @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; min-height: 0; }
-    .hero-text { gap: 40px; padding-bottom: 40px; }
-    .portrait { border-left: 0; border-top: 1px solid var(--ink); }
-    .portrait img { width: min(80%, 360px); }
+ @media (max-width: 860px) {
+ .hero { grid-template-columns: 1fr; min-height: 0; }
+ .hero-text { gap: 40px; padding-bottom: 40px; }
+ .portrait { border-left: 0; border-top: 1px solid var(--ink); }
+ .portrait img { width: min(80%, 360px); }
 
-    section { grid-template-columns: 1fr; }
-    section > .label { padding-bottom: 0; }
-    .body { padding-top: 24px; }
-    h2 { margin-bottom: 40px; }
-    .cols { grid-template-columns: 1fr; gap: 20px; }
+ section { grid-template-columns: 1fr; }
+ section >.label { padding-bottom: 0; }
+ .body { padding-top: 24px; }
+ h2 { margin-bottom: 40px; }
+ .cols { grid-template-columns: 1fr; gap: 20px; }
 
-    .row { grid-template-columns: minmax(0, 1fr) 24px; gap: 10px 16px; padding: 24px var(--pad); }
-    .row > :not(.arrow) { grid-column: 1; }
-    .row .arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
-  }
+ .row { grid-template-columns: minmax(0, 1fr) 24px; gap: 10px 16px; padding: 24px var(--pad); }
+ .row > :not(.arrow) { grid-column: 1; }
+ .row.arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
+ }
 </style>
 </head>
 <body>
 
 <header class="top" id="topo">
-  <a class="label" href="#topo">Guilherme Risson</a>
-  <div class="top-right">
-    <span class="label role">Software Engineer Student<br>Maringá, PR</span>
-    <select class="lang" id="lang" aria-label="Idioma">
-      <option value="pt">PT-BR</option>
-      <option value="en">EN</option>
-      <option value="es">ES</option>
-    </select>
-  </div>
+ <a class="label" href="#topo">Guilherme Risson</a>
+ <div class="top-right">
+ <span class="label role">Software Engineer Student<br>Maringá, PR</span>
+ <select class="lang" id="lang" aria-label="Idioma">
+ <option value="pt">PT-BR</option>
+ <option value="en">EN</option>
+ <option value="es">ES</option>
+ </select>
+ </div>
 </header>
 
 <main>
 
 <div class="hero">
-  <div class="hero-text">
-    <p class="label" data-i18n="hero.label">Perfil / 2026</p>
-    <h1>Guilherme<br>Risson</h1>
-    <p class="intro" data-i18n="hero.intro">Olá, eu sou o Guilherme — Software Engineer Student em Maringá. Construo backends em Python com FastAPI, pipelines de dados e LLMs. Analista de dados na Vitru Educação, no planejamento acadêmico da UniCesumar.</p>
-  </div>
-  <div class="portrait">
-    <img src="guilherme-risson.jpg" width="400" height="400" alt="Retrato de Guilherme Risson" data-i18n-alt="hero.alt">
-  </div>
+ <div class="hero-text">
+ <p class="label" data-i18n="hero.label">Perfil / 2026</p>
+ <h1>Guilherme<br>Risson</h1>
+ <p class="intro" data-i18n="hero.intro">Olá, eu sou o Guilherme. Software Engineer Student em Maringá. Construo backends em Python com FastAPI, pipelines de dados e LLMs. Analista de dados na Vitru Educação, no planejamento acadêmico da UniCesumar.</p>
+ </div>
+ <div class="portrait">
+ <img src="guilherme-risson.jpg" width="400" height="400" alt="Retrato de Guilherme Risson" data-i18n-alt="hero.alt">
+ </div>
 </div>
 
 <section id="sobre">
-  <p class="label" data-i18n="about.label">01 / Sobre</p>
-  <div class="body">
-    <h2 data-i18n="about.h2">Estudante,<br>dados &amp; código.</h2>
-    <div class="cols">
-      <p data-i18n="about.p1">🔧 Experiência com projetos em Python / backend: otimizador de alocação docente (OR-Tools, FastAPI, React) — ~200 docentes em 350+ turmas por módulo em minutos; previsão com erro &lt;2%; auditorias em bases de 40M+ linhas; Job Hunters (~98 mil vagas / 649 fontes); RAG regulatório MRR 0,361 → 0,644.</p>
-      <p data-i18n="about.p2">🎖 Competências principais: Python • FastAPI • Next.js • React • TypeScript • PostgreSQL • Docker • OR-Tools • RAG • Gemini. 👓 Fundamentos: engenharia de software, sistemas de dados, APIs backend, avaliação de LLM e pipelines de dados em produção.</p>
-    </div>
-    <p class="stack label">
-      <span>Python</span><span>FastAPI</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>TypeScript</span><span>Docker</span><span>pytest</span><span>OR-Tools</span><span>DuckDB</span><span>pgvector</span><span>Gemini</span><span>GitHub Actions</span>
-    </p>
-  </div>
+ <p class="label" data-i18n="about.label">01 / Sobre</p>
+ <div class="body">
+ <h2 data-i18n="about.h2">Estudante,<br>dados &amp; código.</h2>
+ <div class="cols">
+ <p data-i18n="about.p1">Experiência com projetos em Python / backend: otimizador de alocação docente (OR-Tools, FastAPI, React): ~200 docentes em 350+ turmas por módulo em minutos; previsão com erro &lt;2%; auditorias em bases de 40M+ linhas; Job Hunters (~98 mil vagas / 649 fontes); RAG regulatório MRR 0,361 → 0,644.</p>
+ <p data-i18n="about.p2">Competências principais: Python • FastAPI • Next.js • React • TypeScript • PostgreSQL • Docker • OR-Tools • RAG • Gemini. Fundamentos: engenharia de software, sistemas de dados, APIs backend, avaliação de LLM e pipelines de dados em produção.</p>
+ </div>
+ <p class="stack label">
+ <span>Python</span><span>FastAPI</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>TypeScript</span><span>Docker</span><span>pytest</span><span>OR-Tools</span><span>DuckDB</span><span>pgvector</span><span>Gemini</span><span>GitHub Actions</span>
+ </p>
+ </div>
 </section>
 
 <section id="projetos">
-  <p class="label" data-i18n="proj.label">02 / Projetos</p>
-  <div class="body">
-    <h2 data-i18n="proj.h2">Projetos<br>abertos.</h2>
-    <div class="rows">
-      <a class="row" href="https://github.com/guilhermerissondev/job-hunters">
-        <span class="label" data-i18n="p1.cat">01 / SaaS</span>
-        <h3>Job Hunters</h3>
-        <p data-i18n="p1.desc">SaaS de vagas com FastAPI, Next.js, PostgreSQL e LLM. ~98 mil vagas · 649 fontes.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev/teacher-allocation-optimizer">
-        <span class="label" data-i18n="p2.cat">02 / Produção</span>
-        <h3>Teacher Allocation</h3>
-        <p data-i18n="p2.desc">Em produção na Vitru. CP-SAT + FastAPI + React — agora open source.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev/tiktok-viral-generator">
-        <span class="label" data-i18n="p3.cat">03 / Agentes</span>
-        <h3>TikTok Viral Generator</h3>
-        <p data-i18n="p3.desc">Agentes que geram vídeo curto pt-BR com fonte em cada fato.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev/regulatory-rag-eval">
-        <span class="label" data-i18n="p4.cat">04 / RAG</span>
-        <h3>Regulatory RAG Eval</h3>
-        <p data-i18n="p4.desc">RAG sobre normativos do BACEN. MRR 0,361 → 0,644.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev/procurement-triage-service">
-        <span class="label" data-i18n="p5.cat">05 / LLM</span>
-        <h3>Procurement Triage</h3>
-        <p data-i18n="p5.desc">Extração de editais do PNCP com LLM — citação literal no PDF, API FastAPI.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
+ <p class="label" data-i18n="proj.label">02 / Projetos</p>
+ <div class="body">
+ <h2 data-i18n="proj.h2">Projetos<br>abertos.</h2>
+ <div class="rows">
+ <a class="row" href="https://github.com/guilhermerissondev/job-hunters">
+ <span class="label" data-i18n="p1.cat">01 / SaaS</span>
+ <h3>Job Hunters</h3>
+ <p data-i18n="p1.desc">SaaS de vagas com FastAPI, Next.js, PostgreSQL e LLM. ~98 mil vagas · 649 fontes.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="https://github.com/guilhermerissondev/teacher-allocation-optimizer">
+ <span class="label" data-i18n="p2.cat">02 / Produção</span>
+ <h3>Teacher Allocation</h3>
+ <p data-i18n="p2.desc">Em produção na Vitru. CP-SAT + FastAPI + React, agora open source.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="https://github.com/guilhermerissondev/tiktok-viral-generator">
+ <span class="label" data-i18n="p3.cat">03 / Agentes</span>
+ <h3>TikTok Viral Generator</h3>
+ <p data-i18n="p3.desc">Agentes que geram vídeo curto pt-BR com fonte em cada fato.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="https://github.com/guilhermerissondev/regulatory-rag-eval">
+ <span class="label" data-i18n="p4.cat">04 / RAG</span>
+ <h3>Regulatory RAG Eval</h3>
+ <p data-i18n="p4.desc">RAG sobre normativos do BACEN. MRR 0,361 → 0,644.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="https://github.com/guilhermerissondev/procurement-triage-service">
+ <span class="label" data-i18n="p5.cat">05 / LLM</span>
+ <h3>Procurement Triage</h3>
+ <p data-i18n="p5.desc">Extração de editais do PNCP com LLM : citação literal no PDF, API FastAPI.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ </div>
+ </div>
 </section>
 
 <section id="experiencia">
-  <p class="label" data-i18n="exp.label">03 / Experiência</p>
-  <div class="body">
-    <h2 data-i18n="exp.h2">Experiência.</h2>
-    <div class="rows">
-      <div class="row">
-        <span class="label" data-i18n="exp1.when">2026 — hoje</span>
-        <h3>Vitru Educação</h3>
-        <p data-i18n="exp1.desc">Analista de dados pleno. Otimizador de alocação docente (OR-Tools, FastAPI, React), modelo preditivo da base de alunos e dashboards em Power BI.</p>
-        <span></span>
-      </div>
-      <div class="row">
-        <span class="label">2022 — 2025</span>
-        <h3>Linoforte Móveis</h3>
-        <p data-i18n="exp2.desc">Operador assistente. Monitoramento de KPIs de produção e qualidade e mapeamento de gargalos operacionais.</p>
-        <span></span>
-      </div>
-    </div>
-  </div>
+ <p class="label" data-i18n="exp.label">03 / Experiência</p>
+ <div class="body">
+ <h2 data-i18n="exp.h2">Experiência.</h2>
+ <div class="rows">
+ <div class="row">
+ <span class="label" data-i18n="exp1.when">2026 - hoje</span>
+ <h3>Vitru Educação</h3>
+ <p data-i18n="exp1.desc">Analista de dados pleno. Otimizador de alocação docente (OR-Tools, FastAPI, React), modelo preditivo da base de alunos e dashboards em Power BI.</p>
+ <span></span>
+ </div>
+ <div class="row">
+ <span class="label">2022 - 2025</span>
+ <h3>Linoforte Móveis</h3>
+ <p data-i18n="exp2.desc">Operador assistente. Monitoramento de KPIs de produção e qualidade e mapeamento de gargalos operacionais.</p>
+ <span></span>
+ </div>
+ </div>
+ </div>
 </section>
 
 <section id="formacao">
-  <p class="label" data-i18n="edu.label">04 / Formação</p>
-  <div class="body">
-    <h2 data-i18n="edu.h2">Formação.</h2>
-    <div class="rows">
-      <div class="row">
-        <span class="label">2026 — 2030</span>
-        <h3 data-i18n="edu1.h3">Engenharia de Software</h3>
-        <p data-i18n="edu1.desc">Bacharelado, Uninter. Em andamento.</p>
-        <span></span>
-      </div>
-      <div class="row">
-        <span class="label" data-i18n="edu2.when">Em andamento</span>
-        <h3>AI Software Engineer 4.0</h3>
-        <p data-i18n="edu2.desc">Formação, Data Science Academy.</p>
-        <span></span>
-      </div>
-      <div class="row">
-        <span class="label">2026</span>
-        <h3 data-i18n="edu3.h3">Ciência de Dados</h3>
-        <p data-i18n="edu3.desc">Pós-graduação, UniCesumar.</p>
-        <span></span>
-      </div>
-      <div class="row">
-        <span class="label">2021 — 2025</span>
-        <h3 data-i18n="edu4.h3">Engenharia Civil</h3>
-        <p data-i18n="edu4.desc">Bacharelado, FAI Faculdades Adamantinenses Integradas.</p>
-        <span></span>
-      </div>
-    </div>
-  </div>
+ <p class="label" data-i18n="edu.label">04 / Formação</p>
+ <div class="body">
+ <h2 data-i18n="edu.h2">Formação.</h2>
+ <div class="rows">
+ <div class="row">
+ <span class="label">2026 - 2030</span>
+ <h3 data-i18n="edu1.h3">Engenharia de Software</h3>
+ <p data-i18n="edu1.desc">Bacharelado, Uninter. Em andamento.</p>
+ <span></span>
+ </div>
+ <div class="row">
+ <span class="label" data-i18n="edu2.when">Em andamento</span>
+ <h3>AI Software Engineer 4.0</h3>
+ <p data-i18n="edu2.desc">Formação, Data Science Academy.</p>
+ <span></span>
+ </div>
+ <div class="row">
+ <span class="label">2026</span>
+ <h3 data-i18n="edu3.h3">Ciência de Dados</h3>
+ <p data-i18n="edu3.desc">Pós-graduação, UniCesumar.</p>
+ <span></span>
+ </div>
+ <div class="row">
+ <span class="label">2021 - 2025</span>
+ <h3 data-i18n="edu4.h3">Engenharia Civil</h3>
+ <p data-i18n="edu4.desc">Bacharelado, FAI Faculdades Adamantinenses Integradas.</p>
+ <span></span>
+ </div>
+ </div>
+ </div>
 </section>
 
 <section id="contato">
-  <p class="label" data-i18n="contact.label">05 / Contato</p>
-  <div class="body">
-    <h2 data-i18n="contact.h2">Contato.</h2>
-    <div class="rows">
-      <a class="row" href="mailto:guilhermerisson@icloud.com">
-        <span class="label" data-i18n="contact.email">E-mail</span>
-        <h3>guilhermerisson@icloud.com</h3>
-        <p data-i18n="contact.emailDesc">Aberto a oportunidades em software engineering / backend — remoto ou Maringá/PR.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://www.linkedin.com/in/guilhermerisson/">
-        <span class="label">LinkedIn</span>
-        <h3>in/guilhermerisson</h3>
-        <p>linkedin.com/in/guilhermerisson</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev">
-        <span class="label">GitHub</span>
-        <h3>guilhermerissondev</h3>
-        <p>github.com/guilhermerissondev</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="cv-guilherme-risson.pdf" target="_blank" rel="noopener" data-i18n-href="contact.cvFile">
-        <span class="label">CV</span>
-        <h3 data-i18n="contact.cv">Currículo em PDF</h3>
-        <p data-i18n="contact.cvFile">cv-guilherme-risson.pdf</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
+ <p class="label" data-i18n="contact.label">05 / Contato</p>
+ <div class="body">
+ <h2 data-i18n="contact.h2">Contato.</h2>
+ <div class="rows">
+ <a class="row" href="mailto:guilhermerisson@icloud.com">
+ <span class="label" data-i18n="contact.email">E-mail</span>
+ <h3>guilhermerisson@icloud.com</h3>
+ <p data-i18n="contact.emailDesc">Aberto a oportunidades em software engineering / backend : remoto ou Maringá/PR.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="https://www.linkedin.com/in/guilhermerisson/">
+ <span class="label">LinkedIn</span>
+ <h3>in/guilhermerisson</h3>
+ <p>linkedin.com/in/guilhermerisson</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="https://github.com/guilhermerissondev">
+ <span class="label">GitHub</span>
+ <h3>guilhermerissondev</h3>
+ <p>github.com/guilhermerissondev</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a class="row" href="cv-guilherme-risson.pdf" target="_blank" rel="noopener" data-i18n-href="contact.cvFile">
+ <span class="label">CV</span>
+ <h3 data-i18n="contact.cv">Currículo em PDF</h3>
+ <p data-i18n="contact.cvFile">cv-guilherme-risson.pdf</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ </div>
+ </div>
 </section>
 
 </main>
 
 <footer>
-  <span class="label">© 2026 Guilherme Risson</span>
-  <a class="label" href="#topo" data-i18n="footer.top">Voltar ao topo ↑</a>
+ <span class="label">© 2026 Guilherme Risson</span>
+ <a class="label" href="#topo" data-i18n="footer.top">Voltar ao topo ↑</a>
 </footer>
 
 <script>
-  const I18N = {
-    en: {
-      "hero.label": "Profile / 2026",
-      "hero.intro": "Hello, I'm Guilherme — Software Engineer Student in Maringá. Building Python backends with FastAPI, data pipelines and LLMs. Data analyst at Vitru Educação on UniCesumar academic planning.",
-      "hero.alt": "Portrait of Guilherme Risson",
-      "about.label": "01 / About",
-      "about.h2": "Student,<br>data &amp; code.",
-      "about.p1": "🔧 Work experience with Python / backend projects: teacher allocation optimizer (OR-Tools, FastAPI, React) — ~200 faculty across 350+ classes per module in minutes; forecasting under 2% error; audits on 40M+ row datasets; Job Hunters (~98k jobs / 649 sources); regulatory RAG MRR 0.361 → 0.644.",
-      "about.p2": "🎖 Core skills: Python • FastAPI • Next.js • React • TypeScript • PostgreSQL • Docker • OR-Tools • RAG • Gemini. 👓 Foundations: software engineering, data systems, backend APIs, LLM evaluation and production data pipelines.",
-      "proj.label": "02 / Projects",
-      "proj.h2": "Open<br>projects.",
-      "p1.cat": "01 / SaaS",
-      "p1.desc": "Job SaaS with FastAPI, Next.js, PostgreSQL, and LLM. ~98k jobs · 649 sources.",
-      "p2.cat": "02 / Production",
-      "p2.desc": "In production at Vitru. CP-SAT + FastAPI + React — now open source.",
-      "p3.cat": "03 / Agents",
-      "p3.desc": "Agents that produce short pt-BR videos with a source on every fact.",
-      "p4.cat": "04 / RAG",
-      "p4.desc": "RAG over Brazilian Central Bank regulations. MRR 0.361 → 0.644.",
-      "p5.cat": "05 / LLM",
-      "p5.desc": "LLM extraction of PNCP tenders — literal PDF citation, FastAPI API.",
-      "exp.label": "03 / Experience",
-      "exp.h2": "Experience.",
-      "exp1.when": "2026 — present",
-      "exp1.desc": "Mid-level data analyst. Teacher allocation optimizer (OR-Tools, FastAPI, React), enrollment forecasting, and Power BI dashboards.",
-      "exp2.desc": "Assistant operator. Production and quality KPI monitoring and mapping of operational bottlenecks.",
-      "edu.label": "04 / Education",
-      "edu.h2": "Education.",
-      "edu1.h3": "Software Engineering",
-      "edu1.desc": "Bachelor's degree, Uninter. In progress.",
-      "edu2.when": "In progress",
-      "edu2.desc": "Professional program, Data Science Academy.",
-      "edu3.h3": "Data Science",
-      "edu3.desc": "Postgraduate specialization, UniCesumar.",
-      "edu4.h3": "Civil Engineering",
-      "edu4.desc": "Bachelor's degree, FAI Faculdades Adamantinenses Integradas.",
-      "contact.label": "05 / Contact",
-      "contact.h2": "Contact.",
-      "contact.email": "Email",
-      "contact.emailDesc": "Open to software engineering / backend opportunities — remote or Maringá, Brazil.",
-      "contact.cv": "Résumé (PDF)",
-      "contact.cvFile": "cv-guilherme-risson-en.pdf",
-      "footer.top": "Back to top ↑",
-    },
-    es: {
-      "hero.label": "Perfil / 2026",
-      "hero.intro": "Hello, I'm Guilherme — Software Engineer Student en Maringá. Backend en Python con FastAPI, pipelines de datos y LLMs. Analista de datos en Vitru Educação (planificación académica UniCesumar).",
-      "hero.alt": "Retrato de Guilherme Risson",
-      "about.label": "01 / Sobre mí",
-      "about.h2": "Estudiante,<br>datos y código.",
-      "about.p1": "🔧 Work experience with Python / backend projects: optimizador de asignación docente (OR-Tools, FastAPI, React) — ~200 docentes en 350+ turmas por módulo en minutos; forecasting &lt;2% de error; auditorías en bases de 40M+ filas; Job Hunters (~98k / 649 fuentes); RAG MRR 0.361 → 0.644.",
-      "about.p2": "🎖 Core skills: Python • FastAPI • Next.js • React • TypeScript • PostgreSQL • Docker • OR-Tools • RAG • Gemini. 👓 Foundations: software engineering, data systems, backend APIs, LLM evaluation and production data pipelines.",
-      "proj.label": "02 / Proyectos",
-      "proj.h2": "Proyectos<br>abiertos.",
-      "p1.cat": "01 / SaaS",
-      "p1.desc": "SaaS de vacantes con FastAPI, Next.js, PostgreSQL y LLM. ~98 mil vacantes · 649 fuentes.",
-      "p2.cat": "02 / Producción",
-      "p2.desc": "En producción en Vitru. CP-SAT + FastAPI + React — ahora open source.",
-      "p3.cat": "03 / Agentes",
-      "p3.desc": "Agentes que generan video corto en pt-BR con fuente en cada hecho.",
-      "p4.cat": "04 / RAG",
-      "p4.desc": "RAG sobre normas del Banco Central de Brasil. MRR 0,361 → 0,644.",
-      "p5.cat": "05 / LLM",
-      "p5.desc": "Extracción de licitaciones del PNCP con LLM — cita literal en el PDF, API FastAPI.",
-      "exp.label": "03 / Experiencia",
-      "exp.h2": "Experiencia.",
-      "exp1.when": "2026 — actual",
-      "exp1.desc": "Analista de datos pleno. Optimizador de asignación docente (OR-Tools, FastAPI, React), modelo predictivo de alumnos y dashboards en Power BI.",
-      "exp2.desc": "Operador asistente. Monitoreo de KPIs de producción y calidad y mapeo de cuellos de botella operativos.",
-      "edu.label": "04 / Formación",
-      "edu.h2": "Formación.",
-      "edu1.h3": "Ingeniería de Software",
-      "edu1.desc": "Grado, Uninter. En curso.",
-      "edu2.when": "En curso",
-      "edu2.desc": "Programa, Data Science Academy.",
-      "edu3.h3": "Ciencia de Datos",
-      "edu3.desc": "Posgrado, UniCesumar.",
-      "edu4.h3": "Ingeniería Civil",
-      "edu4.desc": "Grado, FAI Faculdades Adamantinenses Integradas.",
-      "contact.label": "05 / Contacto",
-      "contact.h2": "Contacto.",
-      "contact.email": "Correo",
-      "contact.emailDesc": "Abierto a oportunidades en software engineering / backend — remoto o Maringá, Brasil.",
-      "contact.cv": "Currículum en PDF (inglés)",
-      "contact.cvFile": "cv-guilherme-risson-en.pdf",
-      "footer.top": "Volver arriba ↑",
-    },
-  };
+ const I18N = {
+ en: {
+ "hero.label": "Profile / 2026",
+ "hero.intro": "Hello, I'm Guilherme. Software Engineer Student in Maringá. Building Python backends with FastAPI, data pipelines and LLMs. Data analyst at Vitru Educação on UniCesumar academic planning.",
+ "hero.alt": "Portrait of Guilherme Risson",
+ "about.label": "01 / About",
+ "about.h2": "Student,<br>data &amp; code.",
+ "about.p1": "Work experience with Python / backend projects: teacher allocation optimizer (OR-Tools, FastAPI, React): ~200 faculty across 350+ classes per module in minutes; forecasting under 2% error; audits on 40M+ row datasets; Job Hunters (~98k jobs / 649 sources); regulatory RAG MRR 0.361 → 0.644.",
+ "about.p2": "Core skills: Python • FastAPI • Next.js • React • TypeScript • PostgreSQL • Docker • OR-Tools • RAG • Gemini. Foundations: software engineering, data systems, backend APIs, LLM evaluation and production data pipelines.",
+ "proj.label": "02 / Projects",
+ "proj.h2": "Open<br>projects.",
+ "p1.cat": "01 / SaaS",
+ "p1.desc": "Job SaaS with FastAPI, Next.js, PostgreSQL, and LLM. ~98k jobs · 649 sources.",
+ "p2.cat": "02 / Production",
+ "p2.desc": "In production at Vitru. CP-SAT + FastAPI + React, now open source.",
+ "p3.cat": "03 / Agents",
+ "p3.desc": "Agents that produce short pt-BR videos with a source on every fact.",
+ "p4.cat": "04 / RAG",
+ "p4.desc": "RAG over Brazilian Central Bank regulations. MRR 0.361 → 0.644.",
+ "p5.cat": "05 / LLM",
+ "p5.desc": "LLM extraction of PNCP tenders : literal PDF citation, FastAPI API.",
+ "exp.label": "03 / Experience",
+ "exp.h2": "Experience.",
+ "exp1.when": "2026 - present",
+ "exp1.desc": "Mid-level data analyst. Teacher allocation optimizer (OR-Tools, FastAPI, React), enrollment forecasting, and Power BI dashboards.",
+ "exp2.desc": "Assistant operator. Production and quality KPI monitoring and mapping of operational bottlenecks.",
+ "edu.label": "04 / Education",
+ "edu.h2": "Education.",
+ "edu1.h3": "Software Engineering",
+ "edu1.desc": "Bachelor's degree, Uninter. In progress.",
+ "edu2.when": "In progress",
+ "edu2.desc": "Professional program, Data Science Academy.",
+ "edu3.h3": "Data Science",
+ "edu3.desc": "Postgraduate specialization, UniCesumar.",
+ "edu4.h3": "Civil Engineering",
+ "edu4.desc": "Bachelor's degree, FAI Faculdades Adamantinenses Integradas.",
+ "contact.label": "05 / Contact",
+ "contact.h2": "Contact.",
+ "contact.email": "Email",
+ "contact.emailDesc": "Open to software engineering / backend opportunities : remote or Maringá, Brazil.",
+ "contact.cv": "Résumé (PDF)",
+ "contact.cvFile": "cv-guilherme-risson-en.pdf",
+ "footer.top": "Back to top ↑",
+ },
+ es: {
+ "hero.label": "Perfil / 2026",
+ "hero.intro": "Hello, I'm Guilherme. Software Engineer Student en Maringá. Backend en Python con FastAPI, pipelines de datos y LLMs. Analista de datos en Vitru Educação (planificación académica UniCesumar).",
+ "hero.alt": "Retrato de Guilherme Risson",
+ "about.label": "01 / Sobre mí",
+ "about.h2": "Estudiante,<br>datos y código.",
+ "about.p1": "Work experience with Python / backend projects: optimizador de asignación docente (OR-Tools, FastAPI, React): ~200 docentes en 350+ turmas por módulo en minutos; forecasting &lt;2% de error; auditorías en bases de 40M+ filas; Job Hunters (~98k / 649 fuentes); RAG MRR 0.361 → 0.644.",
+ "about.p2": "Core skills: Python • FastAPI • Next.js • React • TypeScript • PostgreSQL • Docker • OR-Tools • RAG • Gemini. Foundations: software engineering, data systems, backend APIs, LLM evaluation and production data pipelines.",
+ "proj.label": "02 / Proyectos",
+ "proj.h2": "Proyectos<br>abiertos.",
+ "p1.cat": "01 / SaaS",
+ "p1.desc": "SaaS de vacantes con FastAPI, Next.js, PostgreSQL y LLM. ~98 mil vacantes · 649 fuentes.",
+ "p2.cat": "02 / Producción",
+ "p2.desc": "En producción en Vitru. CP-SAT + FastAPI + React, ahora open source.",
+ "p3.cat": "03 / Agentes",
+ "p3.desc": "Agentes que generan video corto en pt-BR con fuente en cada hecho.",
+ "p4.cat": "04 / RAG",
+ "p4.desc": "RAG sobre normas del Banco Central de Brasil. MRR 0,361 → 0,644.",
+ "p5.cat": "05 / LLM",
+ "p5.desc": "Extracción de licitaciones del PNCP con LLM : cita literal en el PDF, API FastAPI.",
+ "exp.label": "03 / Experiencia",
+ "exp.h2": "Experiencia.",
+ "exp1.when": "2026 - actual",
+ "exp1.desc": "Analista de datos pleno. Optimizador de asignación docente (OR-Tools, FastAPI, React), modelo predictivo de alumnos y dashboards en Power BI.",
+ "exp2.desc": "Operador asistente. Monitoreo de KPIs de producción y calidad y mapeo de cuellos de botella operativos.",
+ "edu.label": "04 / Formación",
+ "edu.h2": "Formación.",
+ "edu1.h3": "Ingeniería de Software",
+ "edu1.desc": "Grado, Uninter. En curso.",
+ "edu2.when": "En curso",
+ "edu2.desc": "Programa, Data Science Academy.",
+ "edu3.h3": "Ciencia de Datos",
+ "edu3.desc": "Posgrado, UniCesumar.",
+ "edu4.h3": "Ingeniería Civil",
+ "edu4.desc": "Grado, FAI Faculdades Adamantinenses Integradas.",
+ "contact.label": "05 / Contacto",
+ "contact.h2": "Contacto.",
+ "contact.email": "Correo",
+ "contact.emailDesc": "Abierto a oportunidades en software engineering / backend : remoto o Maringá, Brasil.",
+ "contact.cv": "Currículum en PDF (inglés)",
+ "contact.cvFile": "cv-guilherme-risson-en.pdf",
+ "footer.top": "Volver arriba ↑",
+ },
+ };
 
-  const HTML_LANG = { pt: "pt-BR", en: "en", es: "es" };
-  const textNodes = document.querySelectorAll("[data-i18n]");
-  const altNodes = document.querySelectorAll("[data-i18n-alt]");
-  const hrefNodes = document.querySelectorAll("[data-i18n-href]");
-  I18N.pt = {};
-  textNodes.forEach((el) => { I18N.pt[el.dataset.i18n] = el.innerHTML; });
-  altNodes.forEach((el) => { I18N.pt[el.dataset.i18nAlt] = el.alt; });
-  hrefNodes.forEach((el) => { I18N.pt[el.dataset.i18nHref] = el.getAttribute("href"); });
+ const HTML_LANG = { pt: "pt-BR", en: "en", es: "es" };
+ const textNodes = document.querySelectorAll("[data-i18n]");
+ const altNodes = document.querySelectorAll("[data-i18n-alt]");
+ const hrefNodes = document.querySelectorAll("[data-i18n-href]");
+ I18N.pt = {};
+ textNodes.forEach((el) => { I18N.pt[el.dataset.i18n] = el.innerHTML; });
+ altNodes.forEach((el) => { I18N.pt[el.dataset.i18nAlt] = el.alt; });
+ hrefNodes.forEach((el) => { I18N.pt[el.dataset.i18nHref] = el.getAttribute("href"); });
 
-  const select = document.getElementById("lang");
+ const select = document.getElementById("lang");
 
-  function setLang(lang) {
-    const dict = I18N[lang] || I18N.pt;
-    textNodes.forEach((el) => { el.innerHTML = dict[el.dataset.i18n] ?? I18N.pt[el.dataset.i18n]; });
-    altNodes.forEach((el) => { el.alt = dict[el.dataset.i18nAlt] ?? I18N.pt[el.dataset.i18nAlt]; });
-    hrefNodes.forEach((el) => { el.setAttribute("href", dict[el.dataset.i18nHref] ?? I18N.pt[el.dataset.i18nHref]); });
-    document.documentElement.lang = HTML_LANG[lang];
-    select.value = lang;
-  }
+ function setLang(lang) {
+ const dict = I18N[lang] || I18N.pt;
+ textNodes.forEach((el) => { el.innerHTML = dict[el.dataset.i18n] ?? I18N.pt[el.dataset.i18n]; });
+ altNodes.forEach((el) => { el.alt = dict[el.dataset.i18nAlt] ?? I18N.pt[el.dataset.i18nAlt]; });
+ hrefNodes.forEach((el) => { el.setAttribute("href", dict[el.dataset.i18nHref] ?? I18N.pt[el.dataset.i18nHref]); });
+ document.documentElement.lang = HTML_LANG[lang];
+ select.value = lang;
+ }
 
-  function initialLang() {
-    const fromUrl = new URLSearchParams(location.search).get("lang");
-    if (fromUrl in HTML_LANG) return fromUrl;
-    const saved = localStorage.getItem("lang");
-    if (saved in HTML_LANG) return saved;
-    const nav = (navigator.language || "pt").slice(0, 2);
-    return nav === "pt" ? "pt" : nav === "es" ? "es" : "en";
-  }
+ function initialLang() {
+ const fromUrl = new URLSearchParams(location.search).get("lang");
+ if (fromUrl in HTML_LANG) return fromUrl;
+ const saved = localStorage.getItem("lang");
+ if (saved in HTML_LANG) return saved;
+ const nav = (navigator.language || "pt").slice(0, 2);
+ return nav === "pt" ? "pt" : nav === "es" ? "es" : "en";
+ }
 
-  select.addEventListener("change", () => {
-    const lang = select.value;
-    localStorage.setItem("lang", lang);
-    const url = new URL(location.href);
-    if (lang === "pt") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
-    history.replaceState(null, "", url);
-    setLang(lang);
-  });
+ select.addEventListener("change", () => {
+ const lang = select.value;
+ localStorage.setItem("lang", lang);
+ const url = new URL(location.href);
+ if (lang === "pt") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
+ history.replaceState(null, "", url);
+ setLang(lang);
+ });
 
-  setLang(initialLang());
+ setLang(initialLang());
 </script>
 
 </body>
