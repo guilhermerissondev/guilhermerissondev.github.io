@@ -253,11 +253,11 @@
   <div class="body">
     <h2 data-i18n="about.h2">Estudante,<br>dados &amp; código.</h2>
     <div class="cols">
-      <p data-i18n="about.p1">Cursa Engenharia de Software na Uninter e atua como analista de dados na Vitru Educação, mantendo pipelines, modelos preditivos e um sistema de otimização usado no planejamento acadêmico da UniCesumar.</p>
-      <p data-i18n="about.p2">Entre seus projetos abertos estão a avaliação de um RAG sobre 294 normativos do BACEN, a extração de editais do PNCP com citação conferida no PDF e um validador que processa 5 milhões de linhas em 4,8 s.</p>
+      <p data-i18n="about.p1">Cursa Engenharia de Software na Uninter e atua como analista de dados na Vitru Educação, mantendo pipelines, modelos preditivos e o otimizador de alocação docente (FastAPI, React, OR-Tools) usado no planejamento acadêmico da UniCesumar.</p>
+      <p data-i18n="about.p2">Nos projetos abertos, o fio condutor é backend, dados e LLM: o Job Hunters (SaaS com FastAPI, Next.js e PostgreSQL), o Teacher Allocation em código aberto, um agente de vídeo com fontes conferidas e um harness de RAG regulatório.</p>
     </div>
     <p class="stack label">
-      <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>DuckDB</span><span>Docker</span><span>pytest</span><span>React</span><span>TypeScript</span><span>LightGBM</span><span>OR-Tools</span><span>sentence-transformers</span><span>Gemini</span><span>GitHub Actions</span>
+      <span>Python</span><span>FastAPI</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>TypeScript</span><span>Docker</span><span>pytest</span><span>OR-Tools</span><span>DuckDB</span><span>pgvector</span><span>Gemini</span><span>GitHub Actions</span>
     </p>
   </div>
 </section>
@@ -267,16 +267,16 @@
   <div class="body">
     <h2 data-i18n="proj.h2">Projetos<br>abertos.</h2>
     <div class="rows">
-      <a class="row" href="https://github.com/guilhermerissondev/regulatory-rag-eval">
-        <span class="label">01 / RAG</span>
-        <h3>Regulatory RAG Eval</h3>
-        <p data-i18n="p1.desc">Avaliação de RAG sobre 294 normativos do BACEN, com busca híbrida (BM25 e embeddings) e auditoria de vigência das citações.</p>
+      <a class="row" href="https://github.com/guilhermerissondev/job-hunters">
+        <span class="label" data-i18n="p1.cat">01 / SaaS</span>
+        <h3>Job Hunters</h3>
+        <p data-i18n="p1.desc">Caçador de vagas como serviço: FastAPI, Next.js, PostgreSQL/pgvector e LLM com citação verificada — ~98 mil vagas em 649 fontes.</p>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
-      <a class="row" href="https://github.com/guilhermerissondev/procurement-triage-service">
-        <span class="label">02 / LLM</span>
-        <h3>Procurement Triage</h3>
-        <p data-i18n="p2.desc">Extração de editais do PNCP com LLM, validada por citação literal no PDF e servida por API FastAPI.</p>
+      <a class="row" href="https://github.com/guilhermerissondev/teacher-allocation-optimizer">
+        <span class="label" data-i18n="p2.cat">02 / Produção</span>
+        <h3>Teacher Allocation</h3>
+        <p data-i18n="p2.desc">Alocação docente com CP-SAT, API FastAPI e painel em React — sistema em operação na Vitru, agora em código aberto.</p>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
       <a class="row" href="https://github.com/guilhermerissondev/tiktok-viral-generator">
@@ -285,28 +285,16 @@
         <p data-i18n="p3.desc">Pipeline de agentes que gera vídeos curtos em pt-BR a partir de fontes verificáveis.</p>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
-      <a class="row" href="https://github.com/guilhermerissondev/credit-risk-decision-engine">
-        <span class="label" data-i18n="p4.cat">04 / Crédito</span>
-        <h3>Credit Risk Engine</h3>
-        <p data-i18n="p4.desc">Modelo de PD com LightGBM e ponto de corte definido por lucro esperado, com reason codes por TreeSHAP.</p>
+      <a class="row" href="https://github.com/guilhermerissondev/regulatory-rag-eval">
+        <span class="label" data-i18n="p4.cat">04 / RAG</span>
+        <h3>Regulatory RAG Eval</h3>
+        <p data-i18n="p4.desc">Avaliação de RAG sobre 294 normativos do BACEN, com busca híbrida (BM25 e embeddings) e auditoria de vigência das citações.</p>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
-      <a class="row" href="https://github.com/guilhermerissondev/fraud-triage-under-capacity">
-        <span class="label" data-i18n="p5.cat">05 / Fraude</span>
-        <h3>Fraud Triage</h3>
-        <p data-i18n="p5.desc">Auditoria do benchmark PaySim e triagem de fraude por valor em risco sob capacidade limitada de revisão.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev/silent-data-defects">
-        <span class="label" data-i18n="p6.cat">06 / Dados</span>
-        <h3>Silent Data Defects</h3>
-        <p data-i18n="p6.desc">Validador de dados em DuckDB que ranqueia defeitos pelo impacto na decisão e gera contratos de validação.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="row" href="https://github.com/guilhermerissondev/teacher-allocation-optimizer">
-        <span class="label" data-i18n="p7.cat">07 / Otimização</span>
-        <h3>Teacher Allocation</h3>
-        <p data-i18n="p7.desc">Alocação docente com CP-SAT, API FastAPI e painel em React, em operação.</p>
+      <a class="row" href="https://github.com/guilhermerissondev/procurement-triage-service">
+        <span class="label" data-i18n="p5.cat">05 / LLM</span>
+        <h3>Procurement Triage</h3>
+        <p data-i18n="p5.desc">Extração de editais do PNCP com LLM, validada por citação literal no PDF e servida por API FastAPI.</p>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
     </div>
@@ -415,22 +403,20 @@
       "hero.alt": "Portrait of Guilherme Risson",
       "about.label": "01 / About",
       "about.h2": "Student,<br>data &amp; code.",
-      "about.p1": "He is studying Software Engineering at Uninter and works as a data analyst at Vitru Educação, maintaining data pipelines, predictive models, and an optimization system used in UniCesumar's academic planning.",
-      "about.p2": "His open projects include an evaluation of a RAG system over 294 Brazilian Central Bank regulations, extraction of public tenders from PNCP with citations checked against the PDF, and a validator that processes 5 million rows in 4.8 s.",
+      "about.p1": "He is studying Software Engineering at Uninter and works as a data analyst at Vitru Educação, maintaining data pipelines, predictive models, and the faculty allocation optimizer (FastAPI, React, OR-Tools) used in UniCesumar's academic planning.",
+      "about.p2": "His open projects share one thread — backend, data, and LLMs: Job Hunters (FastAPI, Next.js, PostgreSQL SaaS), the open-source Teacher Allocation system, a video agent with checked sources, and a regulatory RAG harness.",
       "proj.label": "02 / Projects",
       "proj.h2": "Open<br>projects.",
-      "p1.desc": "RAG evaluation over 294 Brazilian Central Bank regulations, with hybrid search (BM25 and embeddings) and a validity audit of every citation.",
-      "p2.desc": "LLM extraction of public tenders from PNCP, validated by literal citation in the PDF and served through a FastAPI API.",
+      "p1.cat": "01 / SaaS",
+      "p1.desc": "Job hunting as a service: FastAPI, Next.js, PostgreSQL/pgvector, and an LLM with verified citations — ~98k jobs from 649 sources.",
+      "p2.cat": "02 / Production",
+      "p2.desc": "Teacher allocation with CP-SAT, a FastAPI API, and a React dashboard — the system used at Vitru, now open source.",
       "p3.cat": "03 / Agents",
       "p3.desc": "Agent pipeline that produces short videos in Brazilian Portuguese from verifiable sources.",
-      "p4.cat": "04 / Credit",
-      "p4.desc": "PD model with LightGBM and a cutoff set by expected profit, with TreeSHAP reason codes.",
-      "p5.cat": "05 / Fraud",
-      "p5.desc": "Audit of the PaySim benchmark and fraud triage by value at risk under limited review capacity.",
-      "p6.cat": "06 / Data",
-      "p6.desc": "DuckDB data validator that ranks defects by their impact on decisions and generates validation contracts.",
-      "p7.cat": "07 / Optimization",
-      "p7.desc": "Teacher allocation with CP-SAT, a FastAPI API, and a React dashboard, in production.",
+      "p4.cat": "04 / RAG",
+      "p4.desc": "RAG evaluation over 294 Brazilian Central Bank regulations, with hybrid search (BM25 and embeddings) and a validity audit of every citation.",
+      "p5.cat": "05 / LLM",
+      "p5.desc": "LLM extraction of public tenders from PNCP, validated by literal citation in the PDF and served through a FastAPI API.",
       "exp.label": "03 / Experience",
       "exp.h2": "Experience.",
       "exp1.when": "2026 — present",
@@ -460,22 +446,20 @@
       "hero.alt": "Retrato de Guilherme Risson",
       "about.label": "01 / Sobre mí",
       "about.h2": "Estudiante,<br>datos y código.",
-      "about.p1": "Cursa Ingeniería de Software en Uninter y trabaja como analista de datos en Vitru Educação, manteniendo pipelines, modelos predictivos y un sistema de optimización usado en la planificación académica de UniCesumar.",
-      "about.p2": "Entre sus proyectos abiertos están la evaluación de un RAG sobre 294 normas del Banco Central de Brasil, la extracción de licitaciones públicas del PNCP con citas verificadas en el PDF y un validador que procesa 5 millones de filas en 4,8 s.",
+      "about.p1": "Cursa Ingeniería de Software en Uninter y trabaja como analista de datos en Vitru Educação, manteniendo pipelines, modelos predictivos y el optimizador de asignación docente (FastAPI, React, OR-Tools) usado en la planificación académica de UniCesumar.",
+      "about.p2": "Sus proyectos abiertos comparten un hilo — backend, datos y LLM: Job Hunters (SaaS con FastAPI, Next.js y PostgreSQL), Teacher Allocation en código abierto, un agente de video con fuentes verificadas y un harness de RAG regulatorio.",
       "proj.label": "02 / Proyectos",
       "proj.h2": "Proyectos<br>abiertos.",
-      "p1.desc": "Evaluación de RAG sobre 294 normas del Banco Central de Brasil, con búsqueda híbrida (BM25 y embeddings) y auditoría de vigencia de las citas.",
-      "p2.desc": "Extracción de licitaciones del PNCP con LLM, validada por cita literal en el PDF y servida por una API FastAPI.",
+      "p1.cat": "01 / SaaS",
+      "p1.desc": "Cazador de vacantes como servicio: FastAPI, Next.js, PostgreSQL/pgvector y LLM con cita verificada — ~98 mil vacantes en 649 fuentes.",
+      "p2.cat": "02 / Producción",
+      "p2.desc": "Asignación docente con CP-SAT, API FastAPI y panel en React — el sistema en uso en Vitru, ahora en código abierto.",
       "p3.cat": "03 / Agentes",
       "p3.desc": "Pipeline de agentes que genera videos cortos en portugués a partir de fuentes verificables.",
-      "p4.cat": "04 / Crédito",
-      "p4.desc": "Modelo de PD con LightGBM y punto de corte definido por ganancia esperada, con reason codes por TreeSHAP.",
-      "p5.cat": "05 / Fraude",
-      "p5.desc": "Auditoría del benchmark PaySim y triaje de fraude por valor en riesgo con capacidad de revisión limitada.",
-      "p6.cat": "06 / Datos",
-      "p6.desc": "Validador de datos en DuckDB que ordena los defectos por su impacto en la decisión y genera contratos de validación.",
-      "p7.cat": "07 / Optimización",
-      "p7.desc": "Asignación docente con CP-SAT, API FastAPI y panel en React, en operación.",
+      "p4.cat": "04 / RAG",
+      "p4.desc": "Evaluación de RAG sobre 294 normas del Banco Central de Brasil, con búsqueda híbrida (BM25 y embeddings) y auditoría de vigencia de las citas.",
+      "p5.cat": "05 / LLM",
+      "p5.desc": "Extracción de licitaciones del PNCP con LLM, validada por cita literal en el PDF y servida por una API FastAPI.",
       "exp.label": "03 / Experiencia",
       "exp.h2": "Experiencia.",
       "exp1.when": "2026 — actual",
