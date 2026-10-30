@@ -262,39 +262,48 @@
  </div>
 </section>
 
+<section id="produto">
+ <p class="label" data-i18n="prod.label">02 / Produto</p>
+ <div class="body">
+ <h2 data-i18n="prod.h2">Produto<br>no ar.</h2>
+ <div class="rows">
+ <a class="row" href="https://job-hunters-ebon.vercel.app">
+ <span class="label" data-i18n="prod1.cat">SaaS</span>
+ <h3>Job Hunters</h3>
+ <p data-i18n="prod1.desc">SaaS de vagas com FastAPI, PostgreSQL/pgvector, Next.js e LLM. ~98 mil vagas · 649 fontes · 380 testes.</p>
+ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ </div>
+ </div>
+</section>
+
 <section id="projetos">
- <p class="label" data-i18n="proj.label">02 / Projetos</p>
+ <p class="label" data-i18n="proj.label">03 / Projetos</p>
  <div class="body">
  <h2 data-i18n="proj.h2">Projetos<br>abertos.</h2>
  <div class="rows">
- <a class="row" href="https://job-hunters-ebon.vercel.app">
- <span class="label" data-i18n="p1.cat">01 / SaaS</span>
- <h3>Job Hunters</h3>
- <p data-i18n="p1.desc">SaaS de vagas no ar com FastAPI, PostgreSQL/pgvector, Next.js e LLM. ~98 mil vagas · 649 fontes · 380 testes.</p>
- <span class="arrow" aria-hidden="true">→</span>
- </a>
  <a class="row" href="https://github.com/guilhermerissondev/teacher-allocation-optimizer">
- <span class="label" data-i18n="p2.cat">02 / Produção</span>
+ <span class="label" data-i18n="p1.cat">01 / Produção</span>
  <h3>Teacher Allocation</h3>
- <p data-i18n="p2.desc">Sistema de alocação docente em produção na Vitru, com CP-SAT, FastAPI e React. Código aberto.</p>
+ <p data-i18n="p1.desc">Sistema de alocação docente em produção na Vitru, com CP-SAT, FastAPI e React. Código aberto.</p>
  <span class="arrow" aria-hidden="true">→</span>
  </a>
  <a class="row" href="https://github.com/guilhermerissondev/tiktok-viral-generator">
- <span class="label" data-i18n="p3.cat">03 / Agentes</span>
+ <span class="label" data-i18n="p2.cat">02 / Agentes</span>
  <h3>TikTok Viral Generator</h3>
- <p data-i18n="p3.desc">Pipeline de agentes que produz vídeos curtos em pt-BR com fonte verificável em cada fato.</p>
+ <p data-i18n="p2.desc">Pipeline de agentes que produz vídeos curtos em pt-BR com fonte verificável em cada fato.</p>
  <span class="arrow" aria-hidden="true">→</span>
  </a>
  <a class="row" href="https://github.com/guilhermerissondev/regulatory-rag-eval">
- <span class="label" data-i18n="p4.cat">04 / RAG</span>
+ <span class="label" data-i18n="p3.cat">03 / RAG</span>
  <h3>Regulatory RAG Eval</h3>
- <p data-i18n="p4.desc">Avaliação de RAG sobre 294 normativos do BACEN. MRR de 0,361 para 0,644.</p>
+ <p data-i18n="p3.desc">Avaliação de RAG sobre 294 normativos do BACEN. MRR de 0,361 para 0,644.</p>
  <span class="arrow" aria-hidden="true">→</span>
  </a>
  <a class="row" href="https://github.com/guilhermerissondev/procurement-triage-service">
- <span class="label" data-i18n="p5.cat">05 / LLM</span>
+ <span class="label" data-i18n="p4.cat">04 / LLM</span>
  <h3>Procurement Triage</h3>
- <p data-i18n="p5.desc">API FastAPI que extrai dados de editais do PNCP com LLM e valida cada resposta no PDF. 61 testes no CI.</p>
+ <p data-i18n="p4.desc">API FastAPI que extrai dados de editais do PNCP com LLM e valida cada resposta no PDF. 61 testes no CI.</p>
  <span class="arrow" aria-hidden="true">→</span>
  </a>
  </div>
@@ -302,7 +311,7 @@
 </section>
 
 <section id="experiencia">
- <p class="label" data-i18n="exp.label">03 / Experiência</p>
+ <p class="label" data-i18n="exp.label">04 / Experiência</p>
  <div class="body">
  <h2 data-i18n="exp.h2">Experiência.</h2>
  <div class="rows">
@@ -323,7 +332,7 @@
 </section>
 
 <section id="formacao">
- <p class="label" data-i18n="edu.label">04 / Formação</p>
+ <p class="label" data-i18n="edu.label">05 / Formação</p>
  <div class="body">
  <h2 data-i18n="edu.h2">Formação.</h2>
  <div class="rows">
@@ -356,7 +365,7 @@
 </section>
 
 <section id="contato">
- <p class="label" data-i18n="contact.label">05 / Contato</p>
+ <p class="label" data-i18n="contact.label">06 / Contato</p>
  <div class="body">
  <h2 data-i18n="contact.h2">Contato.</h2>
  <div class="rows">
@@ -405,24 +414,25 @@
  "about.h2": "Backend<br>in Python.",
  "about.p1": "At Vitru, I built and maintain in production an optimizer with FastAPI, React and OR-Tools that assigns about 200 instructors to more than 350 classes per module in minutes. I also maintain Python pipelines over datasets with more than 40 million rows.",
  "about.p2": "In my own projects, I shipped Job Hunters, a SaaS with FastAPI, PostgreSQL and Next.js that collects about 98,000 jobs from 649 sources and has 380 tests, CI on GitHub Actions and 21 ADRs. I also built LLM services and agents, such as the PNCP procurement service (61 tests) and the short-video generator (691 tests).",
- "proj.label": "02 / Projects",
+ "prod.label": "02 / Product",
+ "prod.h2": "Live<br>product.",
+ "prod1.desc": "Job SaaS with FastAPI, PostgreSQL/pgvector, Next.js and LLM. ~98k jobs · 649 sources · 380 tests.",
+ "proj.label": "03 / Projects",
  "proj.h2": "Open<br>projects.",
- "p1.cat": "01 / SaaS",
- "p1.desc": "Live job SaaS with FastAPI, PostgreSQL/pgvector, Next.js and LLM. ~98k jobs · 649 sources · 380 tests.",
- "p2.cat": "02 / Production",
- "p2.desc": "Faculty allocation system running in production at Vitru, built with CP-SAT, FastAPI and React. Open source.",
- "p3.cat": "03 / Agents",
- "p3.desc": "Agent pipeline that produces short pt-BR videos with a verifiable source for every claim.",
- "p4.cat": "04 / RAG",
- "p4.desc": "RAG evaluation over 294 Brazilian Central Bank regulations. MRR from 0.361 to 0.644.",
- "p5.cat": "05 / LLM",
- "p5.desc": "FastAPI service that extracts data from PNCP tenders with an LLM and validates every answer against the PDF. 61 tests in CI.",
- "exp.label": "03 / Experience",
+ "p1.cat": "01 / Production",
+ "p1.desc": "Faculty allocation system running in production at Vitru, built with CP-SAT, FastAPI and React. Open source.",
+ "p2.cat": "02 / Agents",
+ "p2.desc": "Agent pipeline that produces short pt-BR videos with a verifiable source for every claim.",
+ "p3.cat": "03 / RAG",
+ "p3.desc": "RAG evaluation over 294 Brazilian Central Bank regulations. MRR from 0.361 to 0.644.",
+ "p4.cat": "04 / LLM",
+ "p4.desc": "FastAPI service that extracts data from PNCP tenders with an LLM and validates every answer against the PDF. 61 tests in CI.",
+ "exp.label": "04 / Experience",
  "exp.h2": "Experience.",
  "exp1.when": "2026 - present",
  "exp1.desc": "Mid-level data analyst. I build and maintain in production the instructor allocation optimizer (FastAPI, React, TypeScript, OR-Tools) and Python data pipelines.",
  "exp2.desc": "Assistant operator. Production and quality KPI monitoring and mapping of operational bottlenecks.",
- "edu.label": "04 / Education",
+ "edu.label": "05 / Education",
  "edu.h2": "Education.",
  "edu1.h3": "Software Engineering",
  "edu1.desc": "Bachelor's degree, Uninter. In progress.",
@@ -432,7 +442,7 @@
  "edu3.desc": "Postgraduate specialization, UniCesumar.",
  "edu4.h3": "Civil Engineering",
  "edu4.desc": "Bachelor's degree, FAI Faculdades Adamantinenses Integradas.",
- "contact.label": "05 / Contact",
+ "contact.label": "06 / Contact",
  "contact.h2": "Contact.",
  "contact.email": "Email",
  "contact.emailDesc": "Looking for an entry-level backend developer role, remote or in Maringá, Brazil.",
@@ -448,24 +458,25 @@
  "about.h2": "Backend<br>en Python.",
  "about.p1": "En Vitru, desarrollé y mantengo en producción un optimizador con FastAPI, React y OR-Tools que asigna cerca de 200 docentes a más de 350 clases por módulo en minutos. También mantengo pipelines en Python sobre bases con más de 40 millones de filas.",
  "about.p2": "En proyectos personales, publiqué Job Hunters, un SaaS con FastAPI, PostgreSQL y Next.js que recopila cerca de 98 mil vacantes de 649 fuentes y tiene 380 pruebas, CI en GitHub Actions y 21 ADRs. También construí APIs y agentes con LLM, como el servicio de licitaciones del PNCP (61 pruebas) y el generador de videos cortos (691 pruebas).",
- "proj.label": "02 / Proyectos",
+ "prod.label": "02 / Producto",
+ "prod.h2": "Producto<br>en línea.",
+ "prod1.desc": "SaaS de vacantes con FastAPI, PostgreSQL/pgvector, Next.js y LLM. ~98 mil vacantes · 649 fuentes · 380 pruebas.",
+ "proj.label": "03 / Proyectos",
  "proj.h2": "Proyectos<br>abiertos.",
- "p1.cat": "01 / SaaS",
- "p1.desc": "SaaS de vacantes en línea con FastAPI, PostgreSQL/pgvector, Next.js y LLM. ~98 mil vacantes · 649 fuentes · 380 pruebas.",
- "p2.cat": "02 / Producción",
- "p2.desc": "Sistema de asignación docente en producción en Vitru, desarrollado con CP-SAT, FastAPI y React. Código abierto.",
- "p3.cat": "03 / Agentes",
- "p3.desc": "Pipeline de agentes que produce videos cortos en pt-BR con una fuente verificable para cada afirmación.",
- "p4.cat": "04 / RAG",
- "p4.desc": "Evaluación de RAG sobre 294 normas del Banco Central de Brasil. MRR de 0,361 a 0,644.",
- "p5.cat": "05 / LLM",
- "p5.desc": "Servicio FastAPI que extrae datos de licitaciones del PNCP con un LLM y valida cada respuesta en el PDF. 61 pruebas en CI.",
- "exp.label": "03 / Experiencia",
+ "p1.cat": "01 / Producción",
+ "p1.desc": "Sistema de asignación docente en producción en Vitru, desarrollado con CP-SAT, FastAPI y React. Código abierto.",
+ "p2.cat": "02 / Agentes",
+ "p2.desc": "Pipeline de agentes que produce videos cortos en pt-BR con una fuente verificable para cada afirmación.",
+ "p3.cat": "03 / RAG",
+ "p3.desc": "Evaluación de RAG sobre 294 normas del Banco Central de Brasil. MRR de 0,361 a 0,644.",
+ "p4.cat": "04 / LLM",
+ "p4.desc": "Servicio FastAPI que extrae datos de licitaciones del PNCP con un LLM y valida cada respuesta en el PDF. 61 pruebas en CI.",
+ "exp.label": "04 / Experiencia",
  "exp.h2": "Experiencia.",
  "exp1.when": "2026 - actual",
  "exp1.desc": "Analista de datos pleno. Desarrollo y mantengo en producción el optimizador de asignación docente (FastAPI, React, TypeScript, OR-Tools) y pipelines de datos en Python.",
  "exp2.desc": "Operador asistente. Monitoreo de KPIs de producción y calidad y mapeo de cuellos de botella operativos.",
- "edu.label": "04 / Formación",
+ "edu.label": "05 / Formación",
  "edu.h2": "Formación.",
  "edu1.h3": "Ingeniería de Software",
  "edu1.desc": "Grado, Uninter. En curso.",
@@ -475,7 +486,7 @@
  "edu3.desc": "Posgrado, UniCesumar.",
  "edu4.h3": "Ingeniería Civil",
  "edu4.desc": "Grado, FAI Faculdades Adamantinenses Integradas.",
- "contact.label": "05 / Contacto",
+ "contact.label": "06 / Contacto",
  "contact.h2": "Contacto.",
  "contact.email": "Correo",
  "contact.emailDesc": "Busco un puesto junior como desarrollador backend, remoto o en Maringá, Brasil.",
