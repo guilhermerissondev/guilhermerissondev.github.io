@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia do Mercado · Demo</title>
+<meta name="description" content="Teste o bot do Guia do Mercado no navegador: mande uma lista e veja a faixa de preço dos mercados da região, com dados reais da coleta.">
+<meta name="theme-color" content="#235789">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #235789;
+    --azul-fundo: #1B4670;
+    --tinta: #161925;
+    --papel: #FDFFFC;
+    --amarelo: #F1D302;
+    --vermelho: #C1292E;
+    --cinza: #E9ECEF;
+    --cinza-hover: #DCE1E6;
+    --texto: #3B3F4A;
+    --mono: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--azul);
+    color: var(--papel);
+    font: 15px/1.5 Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
+
+  .topo {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 14px clamp(16px, 3vw, 36px);
+    border-bottom: 1px solid rgba(255,255,255,.16);
+    font: 500 12px/1.3 var(--mono); letter-spacing: .04em; text-transform: uppercase;
+  }
+  .topo nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  .topo a { text-decoration: none; opacity: .85; }
+  .topo a:hover { opacity: 1; text-decoration: underline; }
+  .marca { display: flex; align-items: center; gap: 10px; }
+  .marca img { width: 28px; height: 28px; }
+
+  main {
+    display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: clamp(24px, 4vw, 64px);
+    max-width: 1180px; margin: 0 auto; padding: clamp(24px, 4vw, 56px) clamp(16px, 3vw, 36px) 56px;
+  }
+  .rotulo { font: 600 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--amarelo); }
+  h1 {
+    margin: 14px 0 18px;
+    font-family: Archivo, sans-serif; font-stretch: 72%; font-weight: 900;
+    font-size: clamp(40px, 5.6vw, 72px); line-height: .92; letter-spacing: -.01em;
+  }
+  .intro { max-width: 52ch; margin: 0 0 28px; font-size: 17px; opacity: .92; }
+
+  .controles { display: grid; gap: 18px; margin-bottom: 28px; }
+  .campo { display: grid; gap: 6px; max-width: 340px; }
+  .campo span { font: 600 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; opacity: .8; }
+  select {
+    appearance: none; padding: 11px 40px 11px 14px; border: 0; border-radius: 10px;
+    background: var(--papel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23161925' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;
+    color: var(--tinta); font: 500 15px Inter, sans-serif;
+  }
+  .exemplos { display: flex; flex-wrap: wrap; gap: 8px; }
+  .exemplos button {
+    padding: 8px 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+    background: transparent; color: var(--papel); font: 500 13px Inter, sans-serif; cursor: pointer;
+    transition: background-color .2s, color .2s, border-color .2s;
+  }
+  .exemplos button:hover { background: var(--amarelo); border-color: var(--amarelo); color: var(--tinta); }
+
+  .origem { border-top: 1px solid rgba(255,255,255,.18); padding-top: 20px; }
+  .origem header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+  .origem h2 { margin: 0; font: 800 22px/1.1 Archivo, sans-serif; font-stretch: 80%; }
+  .origem .total { font: 700 15px var(--mono); color: var(--amarelo); }
+  .origem ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  .origem li {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 14px; padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1); animation: entra .35s ease-out both;
+  }
+  .origem li span { font-weight: 600; }
+  .origem li small { grid-column: 1; opacity: .7; font-size: 12px; }
+  .origem li b { grid-row: 1 / span 2; grid-column: 2; align-self: center; font: 500 12px var(--mono); opacity: .9; }
+  .origem .vazio { margin: 0; opacity: .7; }
+  .nota { margin: 18px 0 0; font-size: 12px; opacity: .65; max-width: 60ch; }
+
+  /* ------------------------------------------------------------ Telegram */
+  .tg {
+    position: sticky; top: 24px;
+    display: flex; flex-direction: column; height: min(760px, calc(100vh - 48px));
+    border-radius: 28px; overflow: hidden; background: #DCE7EF; color: var(--tinta);
+    box-shadow: 0 30px 80px rgba(10, 25, 45, .45);
+  }
+  .tg__topo { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--papel); border-bottom: 1px solid #D5DCE3; }
+  .tg__topo img { width: 38px; height: 38px; border-radius: 50%; background: var(--amarelo); padding: 6px; }
+  .tg__topo b { display: block; font-size: 15px; }
+  .tg__topo small { color: #6A7682; font-size: 12px; }
+  .tg__feed { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding: 14px 12px; scroll-behavior: smooth; }
+  .msg { max-width: 92%; padding: 9px 12px; border-radius: 16px; font-size: 14px; line-height: 1.42; animation: entra .28s ease-out both; }
+  .msg--eu { align-self: flex-end; background: var(--tinta); color: var(--papel); border-bottom-right-radius: 4px; }
+  .msg--bot { align-self: flex-start; background: var(--papel); border-bottom-left-radius: 4px; width: 92%; }
+  .msg--editada { animation: pisca .45s ease-out; }
+  .msg--digitando { width: auto; display: flex; gap: 4px; padding: 12px 14px; }
+  .msg--digitando span { width: 7px; height: 7px; border-radius: 50%; background: #9AA5B1; animation: pula 1s infinite; }
+  .msg--digitando span:nth-child(2) { animation-delay: .15s; }
+  .msg--digitando span:nth-child(3) { animation-delay: .3s; }
+  .tg__teclado { display: grid; gap: 4px; margin-top: 10px; }
+  .tg__linha { display: flex; gap: 4px; }
+  .tecla {
+    flex: 1 1 0; min-width: 0; padding: 8px 6px; border: 0; border-radius: 10px;
+    background: var(--cinza); color: var(--texto); font: 500 12.5px/1.25 Inter, sans-serif;
+    text-align: center; text-decoration: none; cursor: pointer; overflow: hidden; text-overflow: ellipsis;
+    transition: background-color .2s, color .2s, transform .12s;
+  }
+  .tecla:hover { background: var(--cinza-hover); }
+  .tecla:active { transform: scale(.97); }
+  .tecla--escolhida { background: var(--amarelo); color: var(--tinta); font-weight: 700; }
+  .tecla--escolhida:hover { background: #E2C600; }
+  .tg__linha .tecla:only-child { flex-basis: 100%; }
+  .tg__linha .tecla[data-cb^="d:"] { flex: 0 0 44px; }
+  .tg__linha .tecla[data-cb^="a:"] { text-align: left; padding-left: 10px; }
+  .tg__entrada { display: flex; gap: 8px; padding: 10px; background: var(--papel); border-top: 1px solid #D5DCE3; }
+  .tg__entrada input {
+    flex: 1; min-width: 0; padding: 11px 14px; border: 1px solid #CBD3DB; border-radius: 999px;
+    font: 15px Inter, sans-serif; color: var(--tinta); background: #fff;
+  }
+  .tg__entrada button {
+    flex: 0 0 44px; height: 44px; border: 0; border-radius: 50%; background: var(--azul); color: #fff;
+    font-size: 18px; cursor: pointer;
+  }
+
+  @keyframes entra { from { opacity: 0; transform: translateY(6px); } }
+  @keyframes pisca { 0% { box-shadow: 0 0 0 3px var(--amarelo); } 100% { box-shadow: 0 0 0 0 transparent; } }
+  @keyframes pula { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-4px); opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+  @media (max-width: 920px) {
+    main { grid-template-columns: 1fr; }
+    .tg { position: relative; top: 0; height: 640px; order: -1; }
+    .topo nav a:not(:first-child):not(:last-child) { display: none; }
+  }
+</style>
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="https://guilhermerissondev.github.io/guia-do-mercado/"><img src="logo.svg" alt=""> Guia do Mercado</a>
+  <nav>
+    <a href="https://guilhermerissondev.github.io/#projetos">← Portfólio</a>
+    <a href="https://guilhermerissondev.github.io/guia-do-mercado/">Site do produto</a>
+    <a href="https://github.com/guilhermerissondev/guia-do-mercado">Código</a>
+  </nav>
+</header>
+<main>
+  <section>
+    <div class="rotulo">Demo ao vivo · bot do Telegram no navegador</div>
+    <h1>Mande sua lista. Veja quanto custa.</h1>
+    <p class="intro">O chat ao lado roda o mesmo código do bot: o leitor da lista, o casamento com o catálogo de 94 itens e os teclados. Os preços são as faixas reais da coleta semanal em 20 redes de supermercado. Toque em E, T ou P e o total muda na hora.</p>
+    <div class="controles">
+      <label class="campo"><span>Cidade</span><select data-cidade></select></label>
+      <div class="exemplos" aria-label="Exemplos de lista">
+        <button type="button" data-exemplo="2 leite, arroz 5kg, café, tomate 1kg">2 leite, arroz 5kg, café, tomate 1kg</button>
+        <button type="button" data-exemplo="feijão, óleo, açúcar 5kg, 12 ovos, macarrão">feijão, óleo, açúcar 5kg, 12 ovos…</button>
+        <button type="button" data-exemplo="file de frando 1kg, batata 2kg, cebola">com erro de digitação</button>
+      </div>
+    </div>
+    <div class="origem">
+      <header><h2>De onde vem cada preço</h2><span class="total" data-total></span></header>
+      <ul data-origem></ul>
+      <p class="nota">Faixa econômico · típico · premium = P10 · P50 · P90 dos preços da região, com cada marca contada uma vez por rede. Sem pontos suficientes na região imediata, a estimativa sobe para a região intermediária, o estado ou o Brasil. Retrato da coleta de <span data-coleta></span>.</p>
+    </div>
+  </section>
+  <section class="tg" aria-label="Conversa com o bot">
+    <div class="tg__topo"><img src="logo.svg" alt=""><div><b>Guia do Mercado</b><small>bot</small></div></div>
+    <div class="tg__feed" aria-live="polite"></div>
+    <form class="tg__entrada">
+      <input type="text" placeholder="Escreva sua lista…" aria-label="Mensagem" autocomplete="off">
+      <button type="submit" aria-label="Enviar">➤</button>
+    </form>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

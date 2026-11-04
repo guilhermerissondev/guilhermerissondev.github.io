@@ -1,0 +1,16 @@
+{
+  "status": "APROVADO",
+  "checks": {
+    "eligibility_criterion": "PERFIL_EXATO",
+    "exact_profile_allocations": 377,
+    "cluster_profile_allocations": 0,
+    "transmissions": 402,
+    "teachers": 233,
+    "allocated": 377,
+    "unassigned": 25,
+    "used_teachers": 222,
+    "schedule_slots_checked": 479
+  },
+  "issue_count": 0,
+  "issues": []
+}

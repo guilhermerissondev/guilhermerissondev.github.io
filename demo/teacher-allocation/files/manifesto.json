@@ -1,0 +1,219 @@
+{
+  "schema_version": 3,
+  "round": "rodada_001",
+  "created_at_utc": "2026-11-04T22:38:04.236114+00:00",
+  "config": {
+    "input_dir": "C:/OPTIMAL/engines/primary/entrada",
+    "output_dir": "C:/OPTIMAL/dados/resultados/e9b792e9e63d43e69f0e13045a441da7",
+    "base_argument": "C:/OPTIMAL/dados/uploads/a0842cad654f45dda4994153b3ac5170/fonte.xlsx",
+    "expected_module": 52,
+    "workers": 8,
+    "max_time_seconds": null,
+    "random_seed": 42,
+    "grasp_iterations": 0,
+    "require_optimal": true,
+    "eligibility_criterion": "PERFIL_EXATO",
+    "execution_profile": "PROVA_COMPLETA",
+    "margin_offers": null,
+    "prove_canonicity": false
+  },
+  "versions": {
+    "pipeline": "0.2.0-beta",
+    "output_schema": 3,
+    "validation_contract": "2.4",
+    "python": "3.13.16",
+    "openpyxl": "3.1.5",
+    "ortools": "9.15.6755"
+  },
+  "code_fingerprints": {
+    "pipeline": {
+      "path": "pipeline.py",
+      "sha256": "694f6f6022d1a90080914382b7e2501b0e1eab14613105ab955b563c081ea246"
+    },
+    "validation": {
+      "path": "src/alocacao_docente/validation.py",
+      "sha256": "31acc187cc0869ad62cf6c6ba7d21925426737b95e76fdf967b1698ae75812e0"
+    },
+    "criteria": {
+      "path": "src/motor_alocacao/criteria.py",
+      "sha256": "9206bd43dbbbf620bd184fb1df9ce2d4440d3659506eb975edca240ef0464002"
+    },
+    "domain": {
+      "path": "src/motor_alocacao/domain.py",
+      "sha256": "3aa451cee58d3f0f72fb911e58579a16bd4a172db124b5baecb560c49d6b48e8"
+    },
+    "eligibility": {
+      "path": "src/motor_alocacao/eligibility.py",
+      "sha256": "2da0de844bb9928489976d51396d5cb7d62a163bbe18fb1f535248314597dbe8"
+    },
+    "loader": {
+      "path": "src/motor_alocacao/loader.py",
+      "sha256": "ad69af7c09a4ce1abc986099d5b893b03a04e93f660c2912a437dd10d1844c3c"
+    },
+    "solver": {
+      "path": "src/motor_alocacao/solver.py",
+      "sha256": "169374192b5e32becd28306baa8c1c0bdb98335e5a8b22c131c353d4b9b6944e"
+    },
+    "grasp": {
+      "path": "src/motor_alocacao/grasp.py",
+      "sha256": "a97c0c7cfb3fdc2bbf793149397684a6da2c0533604e4719dd9f3aa83aeca0a4"
+    },
+    "audit": {
+      "path": "src/motor_alocacao/audit.py",
+      "sha256": "0cb7e7686ca2ac6bf5e4df8fe6c9114afd19600f5008a50e8ed544f46b8be383"
+    },
+    "reporting": {
+      "path": "src/motor_alocacao/reporting.py",
+      "sha256": "3322716f6d8310248bbcd1bbcb3e0cb8ac187508fe40e4de3ff5da31fc26f5f1"
+    }
+  },
+  "source": {
+    "selection_mode": "explicita",
+    "original_path": "C:/OPTIMAL/dados/uploads/a0842cad654f45dda4994153b3ac5170/fonte.xlsx",
+    "copied_path": "fonte/fonte.xlsx",
+    "filename": "fonte.xlsx",
+    "size_bytes": 134876,
+    "sha256": "c7dd442a492aeae42115e4b7f8eff2b80912465c498456843d5caa720aca4ed4"
+  },
+  "phases": {
+    "validation": {
+      "status": "APROVADO_COM_RESSALVAS",
+      "eligibility_criterion": "PERFIL_EXATO",
+      "source_sha256": "c7dd442a492aeae42115e4b7f8eff2b80912465c498456843d5caa720aca4ed4",
+      "severity_counts": {
+        "CRÍTICA": 0,
+        "ALTA": 1,
+        "MÉDIA": 2,
+        "BAIXA": 0
+      },
+      "blocking_issue_groups": 0
+    },
+    "solver": {
+      "status": "PARCIAL",
+      "eligibility_criterion": "PERFIL_EXATO",
+      "solver_status": "OPTIMAL",
+      "transmissions": 402,
+      "allocated": 377,
+      "unassigned": 25,
+      "used_teachers": 222,
+      "wall_time_seconds": 2.1988679930000217,
+      "diagnostics": {
+        "cp_sat_wall_time_seconds": 1.886903811,
+        "grasp_wall_time_seconds": 0.0,
+        "phase_1_status": "OPTIMAL",
+        "switch_1_teacher_coverage_status": "OPTIMAL",
+        "switch_2_high_capacity_status": "OPTIMAL",
+        "switch_3_scarcity_rescue_status": "OPTIMAL",
+        "switch_4_profile_adherence_status": null,
+        "profile_adherence_phase_applied": false,
+        "best_exact_profile_score": null,
+        "canonicalization_status": "OPTIMAL",
+        "canonicalization_workers": 8,
+        "canonical_tiebreak_score": 36942254,
+        "canonicity_proven": null,
+        "canonicity_proof_requested": false,
+        "canonicity_proof_wall_time_seconds": 0.0,
+        "canonicity_proof_budget": 120.0,
+        "selected_solution_phase_status": "OPTIMAL",
+        "all_lexicographic_phases_optimal": true,
+        "best_used_teachers": 222,
+        "best_high_capacity_score": 3353,
+        "scarcity_rescue_penalty": 2,
+        "unique_candidate_unassigned": 2,
+        "grasp_iterations": 0,
+        "grasp_alpha": 0.25,
+        "grasp_hint_unassigned": null,
+        "grasp_hint_zero_active_teachers": null,
+        "grasp_hint_high_capacity_score": null,
+        "grasp_hint_scarcity_penalty": null,
+        "cp_sat_time_limit_seconds": null,
+        "stricto_max_disciplines_per_module": 2,
+        "execution_profile": "PROVA_COMPLETA",
+        "profile_requires_status": "OPTIMAL",
+        "profile_promotable": true,
+        "coverage_proven": true,
+        "coverage_bound": 25,
+        "coverage_gap_offers": 0,
+        "accepted_gap_offers": 0,
+        "tiebreak_proven": true,
+        "deterministic_cap": null,
+        "eligibility_criterion": "PERFIL_EXATO",
+        "eligibility_uses_cluster": false,
+        "exact_profile_assignments": 377,
+        "cluster_profile_assignments": 0,
+        "profile_fallback_offers": [],
+        "capacity_model": "WEEKLY_BY_MODULE_STAGE",
+        "module_stage_order_mapping": {
+          "1ª": [
+            "PRIMEIRA_ETAPA"
+          ],
+          "2ª": [
+            "SEGUNDA_ETAPA"
+          ],
+          "ESTENDIDA": [
+            "PRIMEIRA_ETAPA",
+            "SEGUNDA_ETAPA"
+          ]
+        },
+        "assignment_variables": 2582,
+        "teacher_slot_constraints": 797,
+        "teacher_stage_slot_constraints": 797,
+        "teacher_stage_capacity_constraints": 466
+      }
+    },
+    "audit": {
+      "status": "APROVADO",
+      "eligibility_criterion": "PERFIL_EXATO",
+      "checks": {
+        "eligibility_criterion": "PERFIL_EXATO",
+        "exact_profile_allocations": 377,
+        "cluster_profile_allocations": 0,
+        "transmissions": 402,
+        "teachers": 233,
+        "allocated": 377,
+        "unassigned": 25,
+        "used_teachers": 222,
+        "schedule_slots_checked": 479
+      },
+      "issue_count": 0
+    }
+  },
+  "artifacts": {
+    "source_copy": {
+      "path": "fonte/fonte.xlsx",
+      "size_bytes": 134876,
+      "sha256": "c7dd442a492aeae42115e4b7f8eff2b80912465c498456843d5caa720aca4ed4"
+    },
+    "validation_report": {
+      "path": "validacao/relatorio_validacao.json",
+      "size_bytes": 3994,
+      "sha256": "3fc9130d823647816854505bc3a71fb9e3a60e4868708240c8a865b8c32950ed"
+    },
+    "validation_issues": {
+      "path": "validacao/inconsistencias.csv",
+      "size_bytes": 1147,
+      "sha256": "bee7529b4a0631573416118e32adb157daf26beb1c5b836f7c7e57f5e850537d"
+    },
+    "audit_report": {
+      "path": "auditoria/auditoria_alocacao.json",
+      "size_bytes": 353,
+      "sha256": "e3cdc7f5657d13b9bc9d900ce40dae488b0942db23b57a7feccbb655c0db6dee"
+    },
+    "allocation_workbook": {
+      "path": "alocacao/resultado_alocacao.xlsx",
+      "size_bytes": 87731,
+      "sha256": "49fbe6596bad5ab113824aeed9573e92b9e0328f12afeb2c2407f87dea1b86a8"
+    },
+    "allocation_summary": {
+      "path": "alocacao/resumo_alocacao.json",
+      "size_bytes": 230972,
+      "sha256": "6b3c008a835d2f006a2a7f7b6e8e7b6743e9a8a81705e3234ec1638f9dda57d0"
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "state": "CONCLUIDA",
+    "message": "Rodada concluída e auditada com sucesso."
+  },
+  "completed_at_utc": "2026-11-04T22:38:07.270113+00:00"
+}
