@@ -409,8 +409,8 @@
  .phone-bar i { display: block; height: 100%; width: 0; background: var(--ink); }
  .phone.ready .phone-bar i { width: 100%; transition: width 3.2s linear; }
 
- .more-title { margin: 72px 0 0; color: var(--muted); }
- .more-title + .rows { margin-top: 18px; margin-bottom: -88px; }
+ .cases { margin-bottom: -88px; }
+ .case:last-child { border-bottom: 0; }
 
  /* ------------------------------ movimento ------------------------------ */
  .progress {
@@ -460,7 +460,6 @@
  .pipeline { grid-template-columns: 1fr 96px; aspect-ratio: auto; }
  .steps li { grid-template-columns: 22px minmax(0, 1fr); }
  .steps li span { display: none; }
- .more-title { margin-top: 56px; }
  }
 </style>
 </head>
@@ -622,21 +621,6 @@
 
  </div>
 
- <p class="label more-title reveal" data-i18n="proj.more">Outros projetos</p>
- <div class="rows">
- <a class="row" href="https://github.com/guilhermerissondev/procurement-triage-service">
- <span class="label">LLM</span>
- <h3>Procurement Triage</h3>
- <p data-i18n="p4.desc">API FastAPI que extrai dados de editais do PNCP com LLM e valida cada resposta no PDF. 61 testes no CI.</p>
- <span class="arrow" aria-hidden="true">→</span>
- </a>
- <a class="row" href="https://github.com/guilhermerissondev/regulatory-rag-eval">
- <span class="label">RAG</span>
- <h3>Regulatory RAG Eval</h3>
- <p data-i18n="p3.desc">Avaliação de RAG sobre 294 normativos do BACEN. MRR de 0,361 para 0,644.</p>
- <span class="arrow" aria-hidden="true">→</span>
- </a>
- </div>
  </div>
 </section>
 
@@ -744,12 +728,9 @@
  "about.h2": "Backend<br>in Python.",
  "about.p1": "At Vitru, I built and maintain in production an optimizer with FastAPI, React and OR-Tools that assigns about 200 instructors to more than 350 classes per module in minutes. I also maintain Python pipelines over datasets with more than 40 million rows.",
  "about.p2": "In my own projects, I shipped Job Hunters, a SaaS with FastAPI, PostgreSQL and Next.js that collects about 98,000 jobs from 649 sources and has 380 tests, CI on GitHub Actions and 21 ADRs. I also built LLM services and agents, such as the PNCP procurement service (61 tests) and the short-video generator (691 tests).",
- "p3.desc": "RAG evaluation over 294 Brazilian Central Bank regulations. MRR from 0.361 to 0.644.",
- "p4.desc": "FastAPI service that extracts data from PNCP tenders with an LLM and validates every answer against the PDF. 61 tests in CI.",
  "proj.label": "02 / Projects",
  "proj.h2": "Built<br>end to end.",
  "proj.lede": "Four products I took from idea to real use: data collection, database, API, interface and deploy. You can try two of them right here, in the browser.",
- "proj.more": "Other projects",
  "btn.code": "Code",
  "screen.try": "Click to try it",
  "screen.open": "Real interface, synthetic data",
@@ -820,12 +801,9 @@
  "about.h2": "Backend<br>en Python.",
  "about.p1": "En Vitru, desarrollé y mantengo en producción un optimizador con FastAPI, React y OR-Tools que asigna cerca de 200 docentes a más de 350 clases por módulo en minutos. También mantengo pipelines en Python sobre bases con más de 40 millones de filas.",
  "about.p2": "En proyectos personales, publiqué Job Hunters, un SaaS con FastAPI, PostgreSQL y Next.js que recopila cerca de 98 mil vacantes de 649 fuentes y tiene 380 pruebas, CI en GitHub Actions y 21 ADRs. También construí APIs y agentes con LLM, como el servicio de licitaciones del PNCP (61 pruebas) y el generador de videos cortos (691 pruebas).",
- "p3.desc": "Evaluación de RAG sobre 294 normas del Banco Central de Brasil. MRR de 0,361 a 0,644.",
- "p4.desc": "Servicio FastAPI que extrae datos de licitaciones del PNCP con un LLM y valida cada respuesta en el PDF. 61 pruebas en CI.",
  "proj.label": "02 / Proyectos",
  "proj.h2": "Hechos de<br>punta a punta.",
  "proj.lede": "Cuatro productos que llevé de la idea al uso real: recolección, base de datos, API, interfaz y deploy. Dos de ellos los puedes probar aquí mismo, en el navegador.",
- "proj.more": "Otros proyectos",
  "btn.code": "Código",
  "screen.try": "Haz clic para probar",
  "screen.open": "Interfaz real, datos sintéticos",
